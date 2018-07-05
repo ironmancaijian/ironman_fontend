@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "axios": "^0.18.0",
     "lib-flexible": "^0.3.2",
     "vue": "^2.5.2",

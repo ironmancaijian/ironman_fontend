@@ -14,7 +14,7 @@ export default {
 body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;}   
 ol,li,ul{margin:0; padding:0;}
 body,html{
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-family: "Wawati SC","Microsoft YaHei","黑体","宋体",sans-serif;
   height: 100%;
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
