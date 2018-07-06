@@ -2,8 +2,9 @@ import Vue from 'vue'
 import axios from 'axios'
 import router from '@/router'
 
+let baseUrl = process.env.NODE_ENV == 'development'?'http://192.168.240.44:3000':'http://118.25.100.171:3000';
 const service = axios.create({
-    baseURL:'http://118.25.100.171:3000',
+    baseURL:baseUrl,
     timeout:5000,
 })
 //添加请求拦截器

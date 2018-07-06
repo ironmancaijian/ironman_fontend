@@ -47,11 +47,6 @@ export default {
             })
         }
     },
-    filters:{
-        time(val){
-            return moment(val).format('YYYY/MM/DD hh:mm:ss')
-        }
-    },
     created(){
         this.getList()
     }
@@ -70,8 +65,8 @@ export default {
         background: #fff;
         box-sizing: border-box;
         justify-content: space-between;
-        border-bottom:1px solid #ccc;
-        box-shadow: 0 5px 10px #ccc;
+        border-bottom:1px solid #F0F2F5;
+        box-shadow: 0 5px 10px #F0F2F5;
         .t_tit{
             font-weight: bold;
         }
@@ -87,20 +82,29 @@ export default {
             display: flex;
             align-items: center;
             padding: 20px;
+            background: #fff;
+            border-bottom: 1px solid #f0f2f5;/*no*/
             .peo{
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                width: 160px;
+                width: 140px;
                 img{
                     width:80px;
                     border-radius: 50%;
+                }
+                span{
+                    font-weight: bold;
                 }
             }
             .msg{
                 font-size: 24px;
                 margin-left: 20px;
                 flex:1;
+                min-height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 p{
                     text-align: right;
                 }

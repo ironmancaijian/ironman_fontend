@@ -1,18 +1,40 @@
 <template>
     <div class="cj_home">
-        <div class="item">
-            <p class="title">文章的标题哦啊</p>
-            <p class="content">文章的内容哦啊文章的内容哦啊文章的内容哦啊文章的内容哦啊文章的内容哦啊</p>
+        <div class="item" v-for="item in articleList" @click="showDetail(item)">
+            <p class="title">{{item.title}}</p>
+            <p class="content">{{item.short_intro}}</p>
             <p class="other">
-                <span class="create">2012-10-10</span>
-                <span class="count">10</span>
+                <span class="create">{{item.create_at | time}}</span>
+                <span class="count"><i class="iconfont icon-eye"></i>{{item.view_count}}</span>
             </p>
         </div>
     </div>
 </template>
 <script>
+import moment from 'moment'
 export default {
-    
+    data () {
+        return {
+            articleList:[]
+        }
+    },
+    methods:{
+        showDetail(item){
+            this.$router.push(`/articleDetail/${item.id}`)
+        }
+    },
+    filters : {
+        time(val){
+            return moment(val).format('YYYY/MM/DD HH:mm:ss')
+        }
+    },
+    created(){
+        this.$http('/articleList').then(res=>{
+            if(res.data.code==0){
+                this.articleList = res.data.data
+            }
+        }) 
+    }
 }
 </script>
 <style lang="less" scoped>
@@ -20,6 +42,8 @@ export default {
     .item{
         box-sizing: border-box;
         padding: 20px;
+        background: #fff;
+        border-bottom:1px solid #F0F2F5;/*no*/
         .title{
             font-size: 34px;
             font-weight: bold;
@@ -32,6 +56,13 @@ export default {
             display: flex;
             justify-content: space-between;
             color:#888;
+            .count{
+                display: flex;
+                align-items: center;
+                i{
+                    margin:0 5px;
+                }
+            }
         }
     }
 }

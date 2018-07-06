@@ -74,7 +74,7 @@ export default {
   },
   mounted(){
     this.TIME = setInterval(()=>{
-      this.time = moment().format('YYYY-MM-DD hh:mm:ss')
+      this.time = moment().format('YYYY-MM-DD HH:mm:ss')
       if(this.animFlag){
         this.shadow++
       }else{

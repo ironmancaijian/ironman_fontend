@@ -34,8 +34,8 @@ export default {
         display: flex;
         justify-content: space-around;
         width: 100%;
-        border-top: 1px solid #ccc;
-        box-shadow: 0 -5px 20px #ccc;
+        border-top: 1px solid #F0F2F5;
+        box-shadow: 0 -5px 20px #F0F2F5;
         .nav{
             font-size:30px;
             line-height: 120px;

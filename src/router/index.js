@@ -5,6 +5,7 @@ import cj from '@/components/cj/index'
 import cjHome from '@/components/cj/views/home'
 import cjInfo from '@/components/cj/views/info'
 import msgBoard from '@/components/cj/views/msgBoard'
+import articleDetail from '@/components/cj/views/articleDetail'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
         name:'msgBoard',
         component:msgBoard
       }]
+    },
+    {
+      path:'/articleDetail/:id',
+      name:'articleDetail',
+      component:articleDetail
     }
   ]
 })

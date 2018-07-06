@@ -51,20 +51,20 @@ export default {
     z-index: 999;
     .modal{
         position: absolute;
-        width: 600px;
+        width: 690px;
         height: 600px;
         background: #fff;
         border-radius: 10px;
         top:50%;
         left:50%;
-        margin-left: -300px;
+        margin-left: -345px;
         margin-top: -300px;
         padding: 20px;
         box-sizing: border-box;
         h3{
             font-size: 32px;
             text-align: center;
-            // border-bottom:1px solid #ccc;
+            // border-bottom:1px solid #F0F2F5;
             padding:10px 0;
             margin-bottom: 20px;
         }
@@ -78,14 +78,14 @@ export default {
                 flex:1;
                 height: 50px;
                 border-radius: 5px;
-                border:1px solid #ccc;
+                border:1px solid #F0F2F5;
                 margin-left: 20px;
             }
             textarea{
                 flex:1;
                 height: 300px;
                 border-radius: 5px;
-                border:1px solid #ccc;
+                border:1px solid #F0F2F5;
                 margin: 30px 0 0 20px;
             }
         }

@@ -10,7 +10,7 @@
         </header>
         <article>
             <p class="title">个人简介</p>
-            <div class="text">这个人跟懒 , 什么也没说....</div>
+            <div class="text">这个人很懒 , 什么也没说....</div>
         </article>
     </div>
 </template>
@@ -49,7 +49,7 @@ export default {
         .title{
             font-size: 30px;
             font-weight: bold;
-            border-bottom:1px solid #ccc;
+            border-bottom:1px solid #F0F2F5;
             line-height: 60px;
         }    
         .text{
