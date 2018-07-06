@@ -27,9 +27,10 @@ export default {
 <style lang="less" scoped>
 .cj{
     footer{
-        position: absolute;
+        position: fixed;
         bottom:0;
         height: 120px;
+        background: #fff;
         display: flex;
         justify-content: space-around;
         width: 100%;

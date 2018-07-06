@@ -59,11 +59,16 @@ export default {
 </script>
 <style lang="less" scoped>
 .msg_board{
-    
+    padding: 100px 0px;
     .top{
         font-size: 32px;
         padding: 20px;
         display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        box-sizing: border-box;
         justify-content: space-between;
         border-bottom:1px solid #ccc;
         box-shadow: 0 5px 10px #ccc;
@@ -86,6 +91,7 @@ export default {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                width: 160px;
                 img{
                     width:80px;
                     border-radius: 50%;
