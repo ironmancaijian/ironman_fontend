@@ -1,7 +1,8 @@
 <template>
-<transition name="fade">
-    <div class="edit_msg" >
-        <div class="modal">
+<transition name="edit"
+leave-active-class="animated zoomOutRight">
+    <div class="edit_msg">
+        <div class="modal animated zoomIn">
             <h3>留言</h3>
             <div class="name">
                 <span>昵称:</span><input v-model="nick_name"/>
@@ -10,8 +11,10 @@
                 <span>内容:</span><textarea v-model="message"/>
             </div>
             <footer>
-                <div class="btn cancel" @click="param.show=false">取消</div>
-                <div class="btn" @click="commit">提交</div>
+                <div class="btn cancel" @click="param.show=false">
+                    <i class="iconfont icon-quxiao"></i> 取消</div>
+                <div class="btn" @click="commit">
+                    <i class="iconfont icon-tijiao"></i> 提交</div>
             </footer>
         </div>
     </div>  
@@ -28,14 +31,9 @@ export default {
     },
     methods:{
         commit () {
-            this.$http.post('/msgboard',{
+            this.$emit('commit',{
                 nick_name:this.nick_name,
                 message:this.message
-            }).then(res=>{
-                if(res.data.code == 0){
-                    this.$emit('refresh')
-                    this.param.show = false
-                }
             })
         }
     }
@@ -61,6 +59,7 @@ export default {
         margin-top: -300px;
         padding: 20px;
         box-sizing: border-box;
+        box-shadow: 0 0 1000px rgba(10, 175, 230, 0.3),  0 0 20px rgba(10, 175, 230, 0);
         h3{
             font-size: 32px;
             text-align: center;
@@ -94,7 +93,7 @@ export default {
             justify-content: flex-end;
             margin-top: 20px;
             .btn{
-                background: #1bb982;
+                background: #0f3854;
                 padding:10px 20px;
                 border-radius: 5px;
                 color:#FFF;

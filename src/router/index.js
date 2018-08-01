@@ -6,6 +6,7 @@ import cjHome from '@/components/cj/views/home'
 import cjInfo from '@/components/cj/views/info'
 import msgBoard from '@/components/cj/views/msgBoard'
 import articleDetail from '@/components/cj/views/articleDetail'
+import notFound from '@/components/basic/notFound'
 
 Vue.use(Router)
 
@@ -14,7 +15,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: home
+      component: home,
+    },
+    {
+      path:'*',
+      name:'Code404',
+      component:notFound
     },
     {
       path:'/cj',
@@ -22,15 +28,24 @@ export default new Router({
       children:[{
         path:'',
         name:'cjHome',
-        component:cjHome
+        component:cjHome,
+        meta:{
+          cname:'主页-蔡健'
+        }
       },{
         path:'info',
         name:'info',
-        component:cjInfo
+        component:cjInfo,
+        meta:{
+          cname:'个人信息-蔡健'
+        }
       },{
         path:'msgBoard',
         name:'msgBoard',
-        component:msgBoard
+        component:msgBoard,
+        meta:{
+          cname:'留言板-蔡健'
+        }
       }]
     },
     {

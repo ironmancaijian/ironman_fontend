@@ -10,7 +10,7 @@
         </header>
         <article>
             <p class="title">个人简介</p>
-            <div class="text">这个人很懒 , 什么也没说....</div>
+            <div class="text">hey，大嘎好，我系蔡健，介四里没有看过的传新个人网站。挤需体验三番钟，里造会干我一样，感jio很无聊,并留了个言然后再也不会点开了(笑)。</div>
         </article>
     </div>
 </template>

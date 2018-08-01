@@ -6,9 +6,11 @@ import router from './router'
 import 'lib-flexible'
 import http from '@/utils/http.js'
 import moment from 'moment'
-
+import 'animate.css'
+// import wx from 'weixin-js-sdk'
 
 Vue.config.productionTip = false
+// Vue.prototype.$wx = wx
 Vue.prototype.$http = http
 Vue.filter('time',function(val){
   return moment(val).format('YYYY/MM/DD HH:mm:ss')

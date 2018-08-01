@@ -1,20 +1,25 @@
 <template>
     <div class="msg_board">
-        <edit-msg v-if="editParam.show" :param="editParam" @refresh="getList()"/>
+        <edit-msg v-if="editParam.show" :param="editParam" @commit="toCommit"/>
         <div class="top">
             <p class="t_tit">留言板</p>
-            <p class="btn" @click="toWrite">留言</p>
+            <p class="btn" @click="toWrite"><i class="iconfont icon-liuyan"></i>&nbsp留言</p>
         </div>
         <div class="content">
-            <div class="item" v-for="item in msgList">
-                <div class="peo">
-                    <img src="/static/img/header.jpg" alt="">
-                    <span>{{item.nick_name}}</span>
+            <transition-group name='list'
+            enter-active-class="animated slideInDown"
+            leave-active-class="animated slideOut">
+                <div class="item" v-for="item in msgList" :key="item.id">
+                    <div class="peo">
+                        <img src="/static/img/msgheader.jpg" alt="">
+                        <span>{{item.nick_name}}</span>
+                    </div>
+                    <div class="msg">{{item.message}}
+                        <p>{{item.create_time | time}}</p>
+                    </div>
                 </div>
-                <div class="msg">{{item.message}}
-                    <p>{{item.create_time | time}}</p>
-                </div>
-            </div>
+            </transition-group>
+            
         </div>
     </div>
 </template>
@@ -36,6 +41,17 @@ export default {
     methods:{
         toWrite(){
             this.editParam.show = true
+        },
+        toCommit(data){
+            this.$http.post('/msgboard',{
+                nick_name:data.nick_name,
+                message:data.message
+            }).then(res=>{
+                if(res.data.code == 0){
+                    this.getList()
+                    this.editParam.show = false
+                }
+            })
         },
         getList(){
             this.$http.get('/msgboard').then(res=>{
@@ -71,7 +87,7 @@ export default {
             font-weight: bold;
         }
         .btn{
-            background: #1bb982;
+            background: #0f3854;
             padding:5px 10px;
             border-radius: 5px;
             color:#FFF;

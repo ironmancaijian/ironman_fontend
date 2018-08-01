@@ -41,6 +41,8 @@ export default {
 .cj_home{
     .item{
         box-sizing: border-box;
+        box-shadow: 0 0 15px #f2f2f2;
+        margin-bottom:10px;
         padding: 20px;
         background: #fff;
         border-bottom:1px solid #F0F2F5;/*no*/
