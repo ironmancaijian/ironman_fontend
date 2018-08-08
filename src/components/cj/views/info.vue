@@ -1,7 +1,7 @@
 <template>
     <div class="cj_info">
-        <header style="backgroundImage:url('/static/img/header_bg.jpg')">
-            <img src="/static/img/header.jpg" alt="">
+        <header style="backgroundImage:url('https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/header_bg.jpg')">
+            <img src="https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/header.jpg" alt="">
             <div class="intro">
                 <p>姓名:蔡健</p>
                 <p>年龄:25岁</p>

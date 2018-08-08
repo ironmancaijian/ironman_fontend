@@ -11,7 +11,7 @@
             leave-active-class="animated slideOut">
                 <div class="item" v-for="item in msgList" :key="item.id">
                     <div class="peo">
-                        <img src="/static/img/msgheader.jpg" alt="">
+                        <img src="https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/msgheader.jpg" alt="">
                         <span>{{item.nick_name}}</span>
                     </div>
                     <div class="msg">{{item.message}}

@@ -17,7 +17,7 @@
                 <div class="title">评论</div>
                <div class="item" v-for="item in initArt.comment" :key="item.id">
                     <div class="peo">
-                        <img src="/static/img/header.jpg" alt="">
+                        <img src="https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/header.jpg" alt="">
                         <span>{{item.nick_name}}</span>
                     </div>
                     <div class="msg">{{item.message}}

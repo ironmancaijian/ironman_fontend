@@ -1,8 +1,2 @@
-cd D:\myFolder\1_TEST_dev\latte_coach_center_build
-git checkout %2
-rd /s/q D:\myFolder\1_TEST_dev\latte_coach_center_build\static
-xcopy D:\myFolder\latte_coach_center_source\dist D:\myFolder\1_TEST_dev\latte_coach_center_build /E/I/Y
-git add .
-git commit -m %1
-git push origin %2
-cd D:\myFolder\latte_coach_center_source
+rd /s/q D:\SELF_program\myprogram\server\ironman_koa2_1.0\public\static
+xcopy D:\SELF_program\myprogram\fontend\ironman_vue\dist D:\SELF_program\myprogram\server\ironman_koa2_1.0\public /E/I/Y

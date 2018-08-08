@@ -29,6 +29,12 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  externals: {
+    'vue': 'Vue',
+    'axios':'axios',
+    'animate.css':'animate.css',
+    'moment':'moment'
+  },
   module: {
     rules: [
       {

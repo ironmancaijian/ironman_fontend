@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import router from '@/router'
 
-let baseUrl = process.env.NODE_ENV == 'development'?'http://192.168.240.44':'http://118.25.100.171:80';
+let baseUrl = process.env.NODE_ENV == 'development'?'http://192.168.250.232':'http://118.25.100.171:80';
 const service = axios.create({
     baseURL:baseUrl,
     timeout:5000,

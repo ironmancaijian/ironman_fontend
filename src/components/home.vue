@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" :style="{'backgroundImage':`url(/static/img/${bg})`}">
+  <div class="hello" :style="{'backgroundImage':`url(	https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/${bg})`}">
     <div class="datetime">
       <p class="date" ref="datetime" >{{time.slice(0,10)}}</p>
       <p class="time" ref="hhss">{{time.slice(10,19)}}</p>
@@ -29,10 +29,10 @@ export default {
     return {
        time:"",
        infoList:[{
-          header:'/static/img/header.jpg',
+          header:'https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/header.jpg',
           name:"TimeFly"
         },{
-         header:'/static/img/lulu.jpg',
+         header:'https://timefly-1256233327.cos.ap-shanghai.myqcloud.com/lulu.jpg',
          name:'璐'
        }],
        asideIndex:1,
